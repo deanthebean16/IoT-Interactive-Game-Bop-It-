@@ -36,3 +36,24 @@ void nextMove() {
     gameOver();
 }
 ```
+
+### Hybrid Input Logic (Dabble + Physical)
+The game checks both the local hardware pins and the Bluetooth serial stream from the Dabble app to register a "Bop"
+
+```cpp
+int checkInput() {
+    Dabble.processInput(); 
+    if (digitalRead(BOP_BUTTON_PIN) == LOW || Gamepad.isPressed(2)) {
+        return 1; // Bop detected
+    }
+    // Additional logic for Twist and Pull sensors...
+    return 0;
+}
+```
+
+### Built With
+
+* **Microcontroller**: ESP32 (Dual-core, Wi-Fi/Bluetooth enabled)
+* **Languages**: C++ (Arduino Framework)
+* **Protocols**: I2C (for OLED), Bluetooth/BLE (for Dabble integration)
+* **Tools**: VS Code, Arduino IDE, Wokwi Circuit Simulator
