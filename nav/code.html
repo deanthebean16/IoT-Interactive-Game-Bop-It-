@@ -1,0 +1,87 @@
+<!-- Matthew Chow, Dean Cheng, Stephen Chen
+01/11/24
+Code  
+This is the code for our groups' code page for our summative website -->
+<!DOCTYPE html>
+<html>`  
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Code</title>
+  <link href="../style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- navigation -->
+  <nav>
+   <a href="../index.html" class="hvr-radial-out">Home</a>
+  </nav>
+  <center>
+
+
+
+    <h2 class="illustration">Code</h2>
+    <div class="box">
+      <p> Instructions: A web page file containing your fully documented and formatted code as well as code snippets explaining in greater detail what is being done. All parts of your code must be referenced. Specify in detail how your components are controlled/used in the code.
+      </p>
+      </div>
+    <p class="illustration">
+      First is just initializing the libraries, Servo object and Servo pin number.
+    </p>
+    <br>
+    <img src="../code/1.png" class="illustration">
+    <br>
+    <p class="illustration">
+      Next, we setup the OLED display and declare the pin numbers for the LEDs and button.
+    </p>
+    <br>
+    <img src="../code/2.png" class="illustration">
+    <br>
+    <p class="illustration">
+      Now for the setup() function. All of this code runs once at the beginning of when the program starts. We first initialize the Serial as well as the PWMs
+      ports, Dabble, Servo, and OLED. Most of this is just setup boilerplate like setting up the OLED formatting and allocating a timer for the ESP32.
+    </p>
+    <br>
+    <img src="../code/3.png" class="illustration">
+    <br>
+    <p class="illustration">
+      Now for the first part of the loop() function. We first make sure we process the Dabble input at the start of each iteration of the loop. Then, we are going
+      to pick a random number from 1-3 which will indicate which action we want the user to press. In this snippet, we see that if choice == 1, we turn
+      on the orange LED (lvl1), display "Button" on the OLED, and then have the motor point towards the orange LED to indicate to the user that they have
+      to press the button. Then with the delay() in the while loop we will proceed the stall/sleep the program until we receive an input from the button.
+    </p>
+    <br>
+    <img src="../code/4.png" class="illustration">
+    <br>
+    <p class="illustration">
+      Now for the second part of the loop() function, for if choice == 2. The logic pretty much stays the same except this time it will be the green LED in
+      action, and the OLED will display "Triangle", showing the user that they must press the triangle button on the Dabble to proceed.
+    </p>
+    <br>
+    <img src="../code/5.png" class="illustration">
+    <br>
+    <p class="illustration">
+      And now for the last part of the loop() function and the code, if choice == 3. Also follows pretty much the same logic but now it will be the red LED in
+      action, the OLED will display "Circle", and the user will have to press circle on the Dabble to proceed.
+    </p>
+    <br>
+    <img src="../code/6.png" class="illustration">
+    <br>
+ 
+
+    <!-- extra white space -->
+    <br>
+    <br>
+    <br>
+
+
+
+  </center>
+
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!-- Matthew Chow, Dean Cheng, Stephen Chen
+01/11/24
+Circuit Schematic  
+This is the code for our groups' circuit schematic page for our summative website -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Wokwi</title>
+  <link href="../style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <a href="../index.html" class="hvr-radial-out">Home</a>
+  </nav>
+
+  <center>
+    
+    <h2 class="illustration">Wokwi</h2>
+    <div class="box">
+      <p> Instructions: Visual WOKWI Illustration of the circuit. Take a screenshot of your WOKWI/cirkitdesigner design. Provide a detailed explanation of how the device works i.e. do I push a button to do something and what happens in return. Make sure to clearly describe the inputs and expected outputs. Explain what pins you used on the ESP32 and why they were suitable by referring to the pinout and the pin features. Explain each device used and its wiring/pin connections.
+      </p>
+      </div>
+    <br>
+
+    <img src="../images/wowki.png" class="illustration">
+    <!-- tutorial -->
+    <p class="illustration">
+      The Schematic View of our Summative BOP IT GAME. The game is played with the OLED displaying the expected input (Triangle, Circle or Button). The player is expected to match the input displayed on the OLED using Dabble control for the inputs Triangle, Circle and a button on the circuit for the button input.
+    </p>
+    <br>
+    <div class="container">
+      <h1>⚙️ Hardware Components and Connections</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Pin Connection (ESP32)</th>
+            <th>Function</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Push Button</td>
+            <td>GPIO 4 (D2)</td>
+            <td>Input to trigger action. GPIO 4 is a general-purpose digital input pin; safe for buttons and supports interrupts.
+</td>
+          </tr>
+          <tr>
+            <td>Green LED</td>
+            <td>GPIO 5 (D1)</td>
+            <td>To indicate the user to press the triangle. 	GPIO 5 is a standard digital output pin; reliable for driving LEDs.</td>
+          </tr>
+          <tr>
+            <td>Yellow LED</td>
+            <td>GPIO 18 (D5)</td>
+            <td>Indicates the user to press the BUTTON. GPIO 18 is a high-speed digital output (HSPI CLK); safe for GPIO use.</td>
+          </tr>
+          <tr>
+            <td>Red LED</td>
+            <td>GPIO 19 (D6)</td>
+            <td>To indicate the user to press circle. 	GPIO 19 (HSPI MISO) is also digital I/O capable; frequently used for outputs. </td>
+          </tr>
+          <tr>
+            <td>OLED Display</td>
+            <td>SDA → GPIO 21 (D21), SCL → GPIO 22 (D22)</td>
+            <td>	These are the default I²C pins on ESP32 and are ideal for I2C devices like OLEDs.</td>
+          </tr>
+          <tr>
+            <td>Servo Motor</td>
+            <td>GPIO 23 (D23)</td>
+            <td>Servo output. GPIO 23 is a digital output pin with PWM capability—perfect for servo control. </td>
+          </tr>
+          <tr>
+            <td>Power Supply</td>
+            <td>External 5V + GND</td>
+            <td>Powers servo + components. 	VIN gives raw 5V from USB or external source,suitable for servos that need higher power. </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  
+    <br>
+    <img src="../images/esp32pinout.png " class="illustration">
+    <br>
+    <p class="illustration">
+      used for reference
+    </p>
+
+
+  
+
+  </center>
+</body>
+
+</html>
